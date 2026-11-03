@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DISTRICT 09 — Sport, street, everyday.">
+<title>DISTRICT 09 — Move Different</title>
+<style>
+:root{--bg:#090b10;--panel:#121722;--line:#283447;--blue:#83b6ff;--muted:#9aa8ba}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18}
+.logo{font-size:28px;font-weight:1000;font-style:italic;letter-spacing:-3px}.logo span{color:var(--blue)}
+nav{display:flex;gap:28px;font-size:12px;color:#c6d0df;letter-spacing:.12em}
+.cartbtn,.outline{border:1px solid #526176;background:transparent;color:white;padding:11px 16px;border-radius:30px}
+.hero{min-height:590px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;background:radial-gradient(ellipse at 75% 45%,#234c88 0%,#101c32 30%,#090b10 72%)}
+.eyebrow{font-size:10px;letter-spacing:.23em;color:#a9c9f5;text-transform:uppercase}
+h1{font-size:clamp(55px,9vw,110px);line-height:.83;letter-spacing:-.075em;margin:22px 0;font-weight:1000}
+h1 span,.blue{color:var(--blue)}.lead{max-width:420px;color:#c2ccda;line-height:1.8;font-size:15px}
+.primary{display:inline-block;background:var(--blue);color:#08111e;font-weight:900;padding:15px 23px;border-radius:30px;border:0;margin-top:20px}
+.hero-art{height:420px;display:grid;place-items:center;position:relative}
+.bigmark{font-size:clamp(180px,30vw,340px);font-weight:1000;letter-spacing:-.15em;font-style:italic;color:#ffffff12}
+.floating{position:absolute;width:190px;height:230px;border-radius:45px 45px 20px 20px;background:linear-gradient(125deg,#64748b,#131a26 75%);box-shadow:0 35px 60px #0009;transform:rotate(-9deg)}
+.floating:before{content:"";position:absolute;left:53px;top:-34px;width:84px;height:70px;border:20px solid #303b4c;border-bottom:0;border-radius:55px 55px 0 0}
+.floating:after{content:"D09";position:absolute;top:112px;left:66px;color:#9fc6ff;font-weight:1000;font-size:24px;letter-spacing:-3px}
+.ticker{text-align:center;padding:15px;background:#111927;color:#b9d6ff;letter-spacing:.2em;font-size:10px}
+section{padding:75px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}h2{font-size:clamp(28px,5vw,44px);margin:8px 0;font-weight:950;letter-spacing:-.05em}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 28px}.filter{border:1px solid var(--line);background:transparent;color:#dce5f1;border-radius:30px;padding:9px 15px;font-size:11px}.filter.active{background:var(--blue);color:#08111e;border-color:var(--blue);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#79aef4}
+.visual{height:220px;display:grid;place-items:center;position:relative;background:radial-gradient(ellipse,#35445b,#111722 72%);overflow:hidden}
+.garment{filter:drop-shadow(0 20px 12px #0008);position:relative}.hoodie{width:115px;height:125px;border-radius:28px 28px 12px 12px;background:linear-gradient(110deg,#596273,#171d28)}.hoodie:before{content:"";position:absolute;top:-23px;left:30px;width:55px;height:48px;border:13px solid #30394a;border-radius:50% 50% 35% 35%}.hoodie:after{content:"D09";position:absolute;top:58px;left:38px;color:#9fc6ff;font-weight:1000}
+.pants{width:105px;height:145px;background:linear-gradient(90deg,#68758a,#1b2432);clip-path:polygon(8% 0,92% 0,100% 100%,58% 100%,50% 42%,42% 100%,0 100%)}
+.tee{width:135px;height:115px;background:#e8edf5;clip-path:polygon(25% 0,40% 8%,60% 8%,75% 0,100% 28%,82% 48%,72% 38%,72% 100%,28% 100%,28% 38%,18% 48%,0 28%)}
+.sweat{width:125px;height:115px;background:linear-gradient(120deg,#687995,#252e40);clip-path:polygon(24% 0,40% 8%,60% 8%,76% 0,100% 30%,82% 47%,72% 36%,72% 100%,28% 100%,28% 36%,18% 47%,0 30%)}
+.cardbody{padding:15px}.category{font-size:9px;color:#9eb4d4;letter-spacing:.17em;text-transform:uppercase}.name{font-weight:800;font-size:14px;margin:8px 0}.desc{font-size:11px;color:var(--muted);min-height:30px}.price{font-weight:900}.add{background:var(--blue);border:0;color:#08111e;font-weight:900;border-radius:25px;padding:9px 12px;font-size:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}
+.about{background:var(--panel);border:1px solid var(--line);border-radius:18px;text-align:center;padding:55px 20px}.about p{max-width:550px;margin:15px auto;color:var(--muted);line-height:1.8;font-size:13px}
+footer{border-top:1px solid #ffffff18;text-align:center;padding:35px 20px;color:var(--muted);font-size:11px}
+.overlay{position:fixed;inset:0;background:#000b;z-index:10}.drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);overflow:auto;background:#111925;border-left:1px solid var(--line);z-index:11;padding:25px}.hidden{display:none!important}
+.cartline{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:17px 0;font-size:13px}.qty button{background:transparent;border:1px solid #59677b;color:white;border-radius:5px;padding:3px 9px}.note{font-size:11px;color:#9eacc0;line-height:1.6}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--blue);color:#07111e;padding:12px 18px;border-radius:30px;font-weight:800;font-size:12px;z-index:20}
+@media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding-top:65px;padding-bottom:30px}.hero-art{height:240px}.floating{transform:scale(.72) rotate(-9deg)}.grid{grid-template-columns:repeat(2,1fr)}.visual{height:175px}section{padding:55px 0}}
+@media(max-width:380px){.grid{gap:9px}.cardbody{padding:10px}.visual{height:145px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+ <a class="logo" href="#">D<span>09</span></a>
+ <nav><a href="#collection">COLLECTION</a><a href="#story">NOTRE ADN</a></nav>
+ <button class="cartbtn" id="openCart">PANIER <span id="count">0</span> ↗</button>
+</header>
+<main>
+ <section class="hero wrap">
+  <div><div class="eyebrow">THE NEW EVERYDAY UNIFORM · DROP 001</div><h1>MOVE<br><span>DIFFERENT.</span></h1><p class="lead">Le mouvement ne s'arrête jamais. Des essentiels sport & casual pour tous les jours.</p><a class="primary" href="#collection">DÉCOUVRIR LA COLLECTION ↗</a></div>
+  <div class="hero-art"><div class="bigmark">09</div><div class="floating"></div></div>
+ </section>
+ <div class="ticker">DISTRICT 09　✳　SPORT MEETS STREET　✳　MOVE DIFFERENT　✳</div>
+ <section class="wrap" id="collection">
+  <div class="sectionhead"><div><div class="eyebrow">DROP 001</div><h2>LA COLLECTION<span class="blue">.</span></h2></div><span class="eyebrow">04 ARTICLES</span></div>
+  <div class="filters" id="filters"><button class="filter active" data-filter="Tous">TOUT</button><button class="filter" data-filter="Hoodies">HOODIES</button><button class="filter" data-filter="Bas">BAS</button><button class="filter" data-filter="T-shirts">T-SHIRTS</button></div>
+  <div class="grid" id="products"></div>
+  <p class="note" style="text-align:center;margin-top:24px">PRODUITS FICTIFS — PRIX ET DISPONIBILITÉS DE DÉMONSTRATION</p>
+ </section>
+ <section class="wrap" id="story"><div class="about"><div class="logo" style="font-size:55px">D<span>09</span></div><div class="eyebrow">OUR IDENTITY</div><h2>NO LIMITS.<br><span class="blue">JUST MOVEMENT.</span></h2><p>DISTRICT 09 imagine une garde-robe simple, fonctionnelle et inspirée par l'énergie du sport et de la rue. Une identité, un mouvement, un style.</p></div></section>
+</main>
+<footer><div class="logo" style="font-size:30px;color:white">D<span>09</span></div><p>SPORT · STREET · EVERYDAY</p><p>Prototype de démonstration — aucune commande ni aucun paiement réel.</p></footer>
+<div class="overlay hidden" id="overlay"></div>
+<aside class="drawer hidden" id="drawer"><div class="row" style="margin:0"><h2 style="font-size:23px">TON PANIER.</h2><button class="outline" id="closeCart">FERMER ×</button></div><div id="cartItems"></div><div class="row" style="margin-top:25px"><b>SOUS-TOTAL</b><b id="total">0,00 €</b></div><button class="primary" style="width:100%;border:0" id="checkout">PAIEMENT DÉSACTIVÉ</button><p class="note">Panier de démonstration uniquement. Aucun paiement ni achat réel n'est possible.</p></aside>
+<script>
+const products=[
+{id:1,name:"D09 Essential Hoodie",cat:"Hoodies",price:39.90,kind:"hoodie",desc:"Le hoodie essentiel, coupe casual."},
+{id:2,name:"D09 Training Jogger",cat:"Bas",price:34.90,kind:"pants",desc:"Un pantalon confortable au quotidien."},
+{id:3,name:"D09 Everyday Tee",cat:"T-shirts",price:19.90,kind:"tee",desc:"Un t-shirt simple et polyvalent."},
+{id:4,name:"D09 Core Sweat",cat:"Hoodies",price:34.90,kind:"sweat",desc:"Le sweat inspiré de la culture sportive."}
+];
+let cart={},filter="Tous";
+const $=id=>document.getElementById(id),money=n=>n.toLocaleString("fr-FR",{style:"currency",currency:"EUR"});
+function renderProducts(){ $("products").innerHTML=products.filter(p=>filter==="Tous"||p.cat===filter).map(p=>`<article class="card"><div class="visual"><div class="garment ${p.kind}"></div></div><div class="cardbody"><div class="category">${p.cat} · D09</div><div class="name">${p.name}</div><div class="desc">${p.desc}</div><div class="row"><span class="price">${money(p.price)}</span><button class="add" data-add="${p.id}">+ AJOUTER</button></div></div></article>`).join("");}
+function renderCart(){let entries=Object.entries(cart).filter(([,q])=>q>0);$("count").textContent=entries.reduce((s,[,q])=>s+q,0);$("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `<div class="cartline"><div><b>${p.name}</b><p class="note">${money(p.price)} / unité</p><div class="qty"><button data-dec="${id}">−</button> ${q} <button data-inc="${id}">+</button></div></div><b>${money(p.price*q)}</b></div>`}).join(""):'<p class="note">Ton panier est vide. Ajoute une pièce de la collection !</p>';$("total").textContent=money(entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0));}
+function open(){ $("drawer").classList.remove("hidden");$("overlay").classList.remove("hidden");}function close(){ $("drawer").classList.add("hidden");$("overlay").classList.add("hidden");}
+$("filters").addEventListener("click",e=>{let b=e.target.closest("[data-filter]");if(!b)return;filter=b.dataset.filter;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+$("products").addEventListener("click",e=>{let b=e.target.closest("[data-add]");if(!b)return;cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();b.textContent="AJOUTÉ ✓";setTimeout(()=>b.textContent="+ AJOUTER",1000)});
+$("cartItems").addEventListener("click",e=>{let a=e.target.closest("[data-inc]"),b=e.target.closest("[data-dec]");if(a)cart[a.dataset.inc]++;if(b){cart[b.dataset.dec]--;if(cart[b.dataset.dec]<=0)delete cart[b.dataset.dec]}renderCart()});
+$("openCart").onclick=open;$("closeCart").onclick=close;$("overlay").onclick=close;$("checkout").onclick=()=>alert("Paiement désactivé : ceci est une boutique de démonstration.");
+renderProducts();renderCart();
+</script>
+</body></html>
